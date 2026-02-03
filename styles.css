@@ -1,4 +1,4 @@
-/* OutfitMD Status Dashboard Styles */
+/* OutfitMD Status Dashboard - Kanban Style */
 :root {
   --bg-primary: #0d1117;
   --bg-secondary: #161b22;
@@ -21,359 +21,382 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.5;
   min-height: 100vh;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 3rem 0;
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 2rem;
+  padding: 2rem 0;
+  margin-bottom: 1.5rem;
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 header p {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .last-updated {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.8rem;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
-  font-size: 0.85rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
   color: var(--text-secondary);
 }
 
-/* Current Focus */
-.focus-section {
-  background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(163, 113, 247, 0.1));
-  border: 1px solid var(--accent-blue);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.focus-section h2 {
-  color: var(--accent-blue);
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
-}
-
-.focus-section p {
-  font-size: 1.05rem;
-}
-
-/* Sections */
-.section {
-  margin-bottom: 2.5rem;
-}
-
-.section h2 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1.5rem;
-}
-
-.project-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-.project-card.status-in-progress {
-  border-left: 3px solid var(--accent-yellow);
-}
-
-.project-header {
+/* Stats Bar */
+.stats-bar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.75rem;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
-.project-header h3 {
-  font-size: 1.1rem;
+.stat {
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  min-width: 80px;
 }
 
-.project-description {
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.7rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.project-card h4 {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  margin: 1rem 0 0.5rem 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-.status-badge {
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
+.stat-open .stat-number {
+  color: var(--accent-yellow);
+}
+
+.stat-pending .stat-number {
+  color: var(--accent-orange);
+}
+
+.stat-future .stat-number {
+  color: var(--accent-purple);
+}
+
+.stat-done .stat-number {
+  color: var(--accent-green);
+}
+
+.stat-tests .stat-number {
+  color: var(--accent-blue);
+}
+
+/* Focus Section */
+.focus-section {
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(163, 113, 247, 0.1));
+  border: 1px solid var(--accent-blue);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.focus-section h2 {
+  color: var(--accent-blue);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.focus-section p {
+  font-size: 0.95rem;
+}
+
+/* Kanban Board */
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.kanban-column {
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 0.75rem;
+  min-height: 400px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.column-header h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.column-count {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
   font-size: 0.7rem;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
-.status-active {
-  background: rgba(63, 185, 80, 0.2);
-  color: var(--accent-green);
-  border: 1px solid var(--accent-green);
-}
-
-.status-wip {
+.column-open {
   background: rgba(210, 153, 34, 0.2);
   color: var(--accent-yellow);
-  border: 1px solid var(--accent-yellow);
 }
 
-/* Task List */
-.task-list {
-  list-style: none;
+.column-pending {
+  background: rgba(219, 109, 40, 0.2);
+  color: var(--accent-orange);
 }
 
-.task-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  padding: 0.35rem 0;
+.column-future {
+  background: rgba(163, 113, 247, 0.2);
+  color: var(--accent-purple);
+}
+
+.column-done {
+  background: rgba(63, 185, 80, 0.2);
+  color: var(--accent-green);
+}
+
+/* Kanban Cards */
+.kanban-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
   font-size: 0.85rem;
 }
 
-.task-icon {
+.kanban-card.done {
+  opacity: 0.7;
+}
+
+.kanban-card strong {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.kanban-card p {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.priority {
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
   flex-shrink: 0;
-  width: 16px;
-  text-align: center;
+}
+
+.priority-high {
+  background: rgba(248, 81, 73, 0.2);
+  color: var(--accent-red);
+}
+
+.quarter {
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  background: rgba(163, 113, 247, 0.3);
+  color: var(--accent-purple);
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-green);
+  border-radius: 2px;
+}
+
+.progress-text {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+}
+
+/* Card Tasks */
+.card-tasks {
+  list-style: none;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.75rem;
+}
+
+.card-tasks li {
+  padding: 0.2rem 0;
 }
 
 .task-done {
   color: var(--accent-green);
 }
 
-.task-pending {
-  color: var(--text-secondary);
-}
-
-.task-in-progress {
+.task-active {
   color: var(--accent-yellow);
+  font-weight: 500;
 }
 
-/* Completed Grid */
-.completed-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.completed-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-secondary);
-  border-radius: 8px;
-  border-left: 3px solid var(--accent-green);
-}
-
-.completed-icon {
-  color: var(--accent-green);
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.completed-item strong {
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.completed-item p {
+.task-todo {
   color: var(--text-secondary);
-  font-size: 0.85rem;
-  margin: 0;
 }
 
-/* Pending Grid */
-.pending-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.pending-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-secondary);
-  border-radius: 8px;
-  border-left: 3px solid var(--accent-yellow);
-}
-
-.pending-icon {
-  color: var(--accent-yellow);
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.pending-item strong {
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.pending-item p {
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-/* Roadmap */
-.roadmap {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.roadmap-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-secondary);
-  border-radius: 8px;
-  border-left: 3px solid var(--accent-purple);
-}
-
-.roadmap-quarter {
-  background: var(--accent-purple);
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  flex-shrink: 0;
-}
-
-.roadmap-item strong {
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.roadmap-item p {
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-/* Backlog */
-.backlog {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.backlog-item {
-  padding: 0.5rem 1rem;
+/* Tests Section */
+.tests-section {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tests-section h2 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.tests-count {
   font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-left: 0.5rem;
+}
+
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.test-group h4 {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.test-item {
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+}
+
+.test-pending {
   color: var(--text-secondary);
 }
 
-/* Changelog */
-.changelog {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.test-pass {
+  color: var(--accent-green);
 }
 
-.changelog-entry {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-card);
-  border-radius: 8px;
-  border-left: 3px solid var(--accent-blue);
+.test-fail {
+  color: var(--accent-red);
 }
 
-.changelog-meta {
-  flex-shrink: 0;
-  min-width: 90px;
+/* Sections */
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section h2 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Compact Changelog */
+.changelog-compact {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.changelog-date {
+.log-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-secondary);
+  border-radius: 6px;
   font-size: 0.8rem;
+}
+
+.log-date {
   font-weight: 600;
   color: var(--accent-blue);
+  min-width: 45px;
 }
 
-.changelog-time {
-  font-size: 0.7rem;
+.log-time {
   color: var(--text-secondary);
+  min-width: 60px;
+  font-size: 0.75rem;
 }
 
-.changelog-content strong {
-  display: block;
-  margin-bottom: 0.25rem;
+.log-text {
+  flex: 1;
 }
 
-.changelog-content p {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.changelog-tag {
-  display: inline-block;
-  padding: 0.15rem 0.5rem;
+.log-tag {
+  padding: 0.15rem 0.4rem;
   border-radius: 4px;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -388,10 +411,26 @@ header p {
   color: var(--accent-orange);
 }
 
-/* Reference Section */
+/* Backlog */
+.backlog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.backlog-item {
+  padding: 0.4rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Reference Grid */
 .reference-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
@@ -399,22 +438,22 @@ header p {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .reference-card h4 {
-  font-size: 0.85rem;
-  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
   color: var(--text-secondary);
 }
 
 .reference-card table {
   width: 100%;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .reference-card td {
-  padding: 0.3rem 0;
+  padding: 0.2rem 0;
 }
 
 .reference-card td:first-child {
@@ -430,23 +469,19 @@ header p {
   text-decoration: none;
 }
 
-.reference-card a:hover {
-  text-decoration: underline;
-}
-
 .mono {
   font-family: 'SF Mono', Monaco, Consolas, monospace;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--accent-purple);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   border-top: 1px solid var(--border-color);
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 footer a {
@@ -454,32 +489,40 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover {
-  text-decoration: underline;
+/* Responsive */
+@media (max-width: 1200px) {
+  .kanban-board {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
   }
 
-  .logo {
-    font-size: 1.75rem;
-  }
-
-  .projects-grid {
+  .kanban-board {
     grid-template-columns: 1fr;
   }
 
-  .changelog-entry {
-    flex-direction: column;
+  .kanban-column {
+    min-height: auto;
+  }
+
+  .stats-bar {
     gap: 0.5rem;
   }
 
-  .changelog-meta {
-    flex-direction: row;
-    gap: 0.5rem;
-    min-width: auto;
+  .stat {
+    padding: 0.5rem 1rem;
+    min-width: 60px;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .log-entry {
+    flex-wrap: wrap;
   }
 }
