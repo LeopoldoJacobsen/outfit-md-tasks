@@ -21,17 +21,17 @@
 
     <!-- Summary Stats -->
     <div class="stats-bar">
-      <div class="stat stat-open">
+      <div class="stat stat-future">
         <span class="stat-number">3</span>
-        <span class="stat-label">Open</span>
+        <span class="stat-label">Future</span>
       </div>
       <div class="stat stat-pending">
         <span class="stat-number">2</span>
         <span class="stat-label">Pending</span>
       </div>
-      <div class="stat stat-future">
+      <div class="stat stat-open">
         <span class="stat-number">3</span>
-        <span class="stat-label">Future</span>
+        <span class="stat-label">Open</span>
       </div>
       <div class="stat stat-done">
         <span class="stat-number">5</span>
@@ -48,6 +48,56 @@
 
     <!-- Kanban Board -->
     <div class="kanban-board">
+
+      <!-- FUTURE Column -->
+      <div class="kanban-column">
+        <div class="column-header column-future">
+          <h3>🗺️ Future</h3>
+          <span class="column-count">3</span>
+        </div>
+
+        <div class="kanban-card">
+          <div class="card-header">
+            <strong>Multi-Subaccount Rollout</strong>
+            <span class="quarter">Q1</span>
+          </div>
+          <p>Extend commission payouts to all subaccounts</p>
+        </div>
+
+        <div class="kanban-card">
+          <div class="card-header">
+            <strong>Daily Product Sync</strong>
+            <span class="quarter">Q1</span>
+          </div>
+          <p>6am EST auto-sync for master spreadsheet</p>
+        </div>
+
+        <div class="kanban-card">
+          <div class="card-header">
+            <strong>Affiliate Performance Dashboard</strong>
+            <span class="quarter">Q2</span>
+          </div>
+          <p>Revenue tracking, commission history, payout statements</p>
+        </div>
+      </div>
+
+      <!-- PENDING Column -->
+      <div class="kanban-column">
+        <div class="column-header column-pending">
+          <h3>⏳ Pending</h3>
+          <span class="column-count">2</span>
+        </div>
+
+        <div class="kanban-card">
+          <strong>Error Notification System</strong>
+          <p>Slack/email alerts for failed transfers & API errors</p>
+        </div>
+
+        <div class="kanban-card">
+          <strong>Integration Testing Suite</strong>
+          <p>End-to-end tests: GHL → n8n → Stripe</p>
+        </div>
+      </div>
 
       <!-- OPEN Column -->
       <div class="kanban-column">
@@ -112,61 +162,6 @@
             <li class="task-todo">○ Discount code capture</li>
             <li class="task-todo">○ Full spreadsheet population</li>
           </ul>
-        </div>
-      </div>
-
-      <!-- PENDING Column -->
-      <div class="kanban-column">
-        <div class="column-header column-pending">
-          <h3>⏳ Pending</h3>
-          <span class="column-count">2</span>
-        </div>
-
-        <div class="kanban-card">
-          <strong>Error Notification System</strong>
-          <p>Slack/email alerts for failed transfers & API errors</p>
-        </div>
-
-        <div class="kanban-card">
-          <strong>Error Notification System</strong>
-          <p>Slack/email alerts for failed transfers & API errors</p>
-        </div>
-
-        <div class="kanban-card">
-          <strong>Integration Testing Suite</strong>
-          <p>End-to-end tests: GHL → n8n → Stripe</p>
-        </div>
-      </div>
-
-      <!-- FUTURE Column -->
-      <div class="kanban-column">
-        <div class="column-header column-future">
-          <h3>🗺️ Future</h3>
-          <span class="column-count">3</span>
-        </div>
-
-        <div class="kanban-card">
-          <div class="card-header">
-            <strong>Multi-Subaccount Rollout</strong>
-            <span class="quarter">Q1</span>
-          </div>
-          <p>Extend commission payouts to all subaccounts</p>
-        </div>
-
-        <div class="kanban-card">
-          <div class="card-header">
-            <strong>Daily Product Sync</strong>
-            <span class="quarter">Q1</span>
-          </div>
-          <p>6am EST auto-sync for master spreadsheet</p>
-        </div>
-
-        <div class="kanban-card">
-          <div class="card-header">
-            <strong>Affiliate Performance Dashboard</strong>
-            <span class="quarter">Q2</span>
-          </div>
-          <p>Revenue tracking, commission history, payout statements</p>
         </div>
       </div>
 
