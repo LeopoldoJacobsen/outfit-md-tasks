@@ -1,0 +1,6 @@
+[submodule "outfit-md-onboarding"]
+	path = outfit-md-onboarding
+	url = https://github.com/LeopoldoJacobsen/outfit-md-onboarding.git
+[submodule "outfitmd-n8n-workflows"]
+	path = outfitmd-n8n-workflows
+	url = https://github.com/LeopoldoJacobsen/outfitmd-n8n-workflows.git
