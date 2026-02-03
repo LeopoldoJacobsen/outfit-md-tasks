@@ -85,7 +85,7 @@
             <strong>Client-Facing Portal</strong>
             <span class="quarter">TBD</span>
           </div>
-          <p>Details to be gathered from Stephanie</p>
+          <p>Details from Stephanie — see meeting Feb 3</p>
         </div>
 
         <div class="kanban-card">
@@ -319,13 +319,27 @@
     <!-- Backlog -->
     <section class="section">
       <h2>📋 Backlog</h2>
-      <div class="backlog">
-        <span class="backlog-item">Duplicate webhook idempotency</span>
-        <span class="backlog-item">Fuzzy name matching</span>
-        <span class="backlog-item">Stripe rate limits</span>
-        <span class="backlog-item">Product not found alert</span>
-        <span class="backlog-item">Missing Stripe Connect alert</span>
-        <span class="backlog-item">Sandbox testing mode</span>
+      <div class="backlog-detailed">
+        <div class="backlog-card">
+          <strong>SKU-Only Matching (Solved)</strong>
+          <p>✓ Using SKUs only for product matching. Never change SKUs once assigned.</p>
+        </div>
+        <div class="backlog-card">
+          <strong>Stripe Rate Limits</strong>
+          <p>⚠️ No solution yet. Need throttling strategy for batch operations.</p>
+        </div>
+        <div class="backlog-card">
+          <strong>Product Not Found → SKU Fallback</strong>
+          <p>If product not found by name but has SKU, match via SKU instead of failing.</p>
+        </div>
+        <div class="backlog-card">
+          <strong>Missing Stripe Connect Alert</strong>
+          <p>Notify when affiliate is missing Stripe Connect account during payout.</p>
+        </div>
+        <div class="backlog-card">
+          <strong>Auto-Remove Sandbox Mode</strong>
+          <p>Automate disabling sandbox when client completes Stripe Connect onboarding.</p>
+        </div>
       </div>
     </section>
 
