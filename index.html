@@ -15,159 +15,191 @@
   <div class="container">
     <header>
       <h1 class="logo">OutfitMD</h1>
-      <p>Team Status Dashboard</p>
-      <span class="last-updated">Last Updated: February 3, 2026 • 2:10 PM EST</span>
+      <p>Project Status Dashboard</p>
+      <span class="last-updated">Last Updated: February 3, 2026 • 2:19 PM EST</span>
     </header>
 
     <!-- Current Focus -->
     <section class="focus-section">
       <h2>🎯 Current Focus</h2>
-      <p>Setting up project infrastructure with status dashboard for team visibility. Configuring GitHub Pages
-        deployment and private repo access patterns.</p>
+      <p><strong>Commission Calculation for Supreme Nutrition & All Subaccounts</strong> — Working on fixing the payout
+        workflow for affiliate orders. The SKU implementation will help match products more accurately between wholesale
+        and retail, ensuring correct commission calculations (retail − wholesale).</p>
     </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
-      <h2>👥 Team</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <span class="role">CSM</span>
-          <strong>Connor</strong>
-          <small>Onboarding calls, pricing, walkthrough</small>
-        </div>
-        <div class="team-member">
-          <span class="role">PM</span>
-          <strong>Samira</strong>
-          <small>Day 2/6 checkpoints, dual confirmation</small>
-        </div>
-        <div class="team-member">
-          <span class="role">Tech</span>
-          <strong>Iliana</strong>
-          <small>GHL setup, A2P, Stripe, products</small>
-        </div>
-        <div class="team-member">
-          <span class="role">Design</span>
-          <strong>Mateus</strong>
-          <small>Branding, product images, collections</small>
-        </div>
-      </div>
-    </section>
+    <!-- Open Projects (In Progress) -->
+    <section class="section">
+      <h2>🔄 Open Projects</h2>
+      <div class="projects-grid">
 
-    <!-- Project Cards -->
-    <div class="projects-grid">
-
-      <!-- Onboarding Project -->
-      <div class="project-card">
-        <div class="project-header">
-          <h3><span class="icon">🚀</span> Onboarding Automation</h3>
-          <span class="status-badge status-active">Active</span>
-        </div>
-        <p class="project-description">
-          7-day client onboarding flow: GHL subaccount creation, product import via CSV, A2P/SMS setup, and Stripe
-          Connect configuration.
-        </p>
-
-        <h4>✅ Completed</h4>
-        <ul class="task-list">
-          <li><span class="task-icon task-done">✓</span> GHL Import template with SKU sync workflow</li>
-          <li><span class="task-icon task-done">✓</span> SKU Management System for product deduplication</li>
-          <li><span class="task-icon task-done">✓</span> CSV Export workflow (API doesn't save seoData)</li>
-          <li><span class="task-icon task-done">✓</span> OAuth App for cross-subaccount access</li>
-          <li><span class="task-icon task-done">✓</span> OpenAI SEO description generation</li>
-        </ul>
-
-        <h4>📋 Dependencies</h4>
-        <ul class="dependency-list">
-          <li><span class="dep-ok">●</span> n8n Cloud (outfitmd.app.n8n.cloud)</li>
-          <li><span class="dep-ok">●</span> GoHighLevel Agency API</li>
-          <li><span class="dep-ok">●</span> OpenAI Account</li>
-          <li><span class="dep-ok">●</span> Google Sheets OAuth</li>
-        </ul>
-      </div>
-
-      <!-- n8n Workflows Project -->
-      <div class="project-card">
-        <div class="project-header">
-          <h3><span class="icon">⚙️</span> n8n Workflows</h3>
-          <span class="status-badge status-wip">In Progress</span>
-        </div>
-        <p class="project-description">
-          Automated commission payouts via Stripe Connect, product import modules, and custom checkout scripts.
-        </p>
-
-        <h4>🔴 Critical Issues</h4>
-        <ul class="task-list critical">
-          <li><span class="task-icon task-pending">○</span> Rewire workflow - sheet lookup before Calculate Commission
-          </li>
-          <li><span class="task-icon task-pending">○</span> Fix commission formula: retail − wholesale (NOT %)</li>
-          <li><span class="task-icon task-pending">○</span> Pass Stripe Connect ID to Transfer node</li>
-        </ul>
-
-        <h4>🔄 In Progress</h4>
-        <ul class="task-list">
-          <li><span class="task-icon task-in-progress">◐</span> Supreme Nutrition Sales Report (fields troubleshooting)
-          </li>
-        </ul>
-
-        <h4>✅ Completed</h4>
-        <ul class="task-list">
-          <li><span class="task-icon task-done">✓</span> Payout Commissions workflow active</li>
-          <li><span class="task-icon task-done">✓</span> Stripe Connect Onboarding active</li>
-          <li><span class="task-icon task-done">✓</span> Import OutfitMD Products module</li>
-          <li><span class="task-icon task-done">✓</span> Supreme Nutrition Checkout script</li>
-        </ul>
-
-        <h4>📋 Dependencies</h4>
-        <ul class="dependency-list">
-          <li><span class="dep-ok">●</span> n8n Cloud</li>
-          <li><span class="dep-ok">●</span> Stripe Connect (Express accounts)</li>
-          <li><span class="dep-ok">●</span> GoHighLevel CRM</li>
-          <li><span class="dep-warn">●</span> Stripe API Key (pending for transfers)</li>
-          <li><span class="dep-ok">●</span> Google Sheets (affiliate mapping)</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Testing Status -->
-    <section class="testing-section">
-      <h2>🧪 Testing Status</h2>
-      <div class="tests-grid">
-        <div class="test-category">
-          <h4>Unit Tests</h4>
-          <ul class="test-list">
-            <li><span class="test-pending">○</span> Webhook POST data validation</li>
-            <li><span class="test-pending">○</span> Product name matching (exact + fuzzy)</li>
-            <li><span class="test-pending">○</span> Commission calculation: retail − wholesale</li>
-            <li><span class="test-pending">○</span> Stripe transfer creation (sandbox)</li>
+        <div class="project-card status-in-progress">
+          <div class="project-header">
+            <h3>Commission Payout System</h3>
+            <span class="status-badge status-wip">In Progress</span>
+          </div>
+          <p class="project-description">Automated affiliate payouts via Stripe Connect based on order sales.</p>
+          <h4>What's Being Done</h4>
+          <ul class="task-list">
+            <li><span class="task-icon task-in-progress">◐</span> <strong>SKU-based product matching</strong> — Match
+              wholesale ↔ retail accurately</li>
+            <li><span class="task-icon task-in-progress">◐</span> <strong>Supreme Nutrition commission calc</strong> —
+              Fields troubleshooting</li>
+            <li><span class="task-icon task-pending">○</span> Commission formula: retail − wholesale (NOT %)</li>
+            <li><span class="task-icon task-pending">○</span> Rewire workflow: sheet lookup → calculate → transfer</li>
           </ul>
         </div>
-        <div class="test-category">
-          <h4>Integration Tests</h4>
-          <ul class="test-list">
-            <li><span class="test-pending">○</span> GHL → n8n webhook fire</li>
-            <li><span class="test-pending">○</span> Product matching → wholesale price</li>
-            <li><span class="test-pending">○</span> Sheet lookup → Stripe Connect ID</li>
-            <li><span class="test-pending">○</span> End-to-end payment → payout</li>
+
+        <div class="project-card status-in-progress">
+          <div class="project-header">
+            <h3>SKU Management System</h3>
+            <span class="status-badge status-wip">In Progress</span>
+          </div>
+          <p class="project-description">Human-readable SKUs for reliable product deduplication across all subaccounts.
+          </p>
+          <h4>What's Being Done</h4>
+          <ul class="task-list">
+            <li><span class="task-icon task-done">✓</span> SKU format defined (TIRZ-B12-68MG-4ML)</li>
+            <li><span class="task-icon task-done">✓</span> Batch SKU Update workflow created</li>
+            <li><span class="task-icon task-in-progress">◐</span> Sync SKUs to Google Sheets master</li>
+            <li><span class="task-icon task-pending">○</span> Propagate SKUs to all subaccounts</li>
           </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Completed Projects -->
+    <section class="section">
+      <h2>✅ Completed Projects</h2>
+      <div class="completed-grid">
+        <div class="completed-item">
+          <span class="completed-icon">✓</span>
+          <div>
+            <strong>Client Onboarding Automation</strong>
+            <p>7-day onboarding flow with GHL subaccount, CSV product import, A2P/SMS setup</p>
+          </div>
+        </div>
+        <div class="completed-item">
+          <span class="completed-icon">✓</span>
+          <div>
+            <strong>Product Import via CSV</strong>
+            <p>GHL template with 54 products, AI SEO descriptions, auto-generated handles</p>
+          </div>
+        </div>
+        <div class="completed-item">
+          <span class="completed-icon">✓</span>
+          <div>
+            <strong>Stripe Connect Onboarding</strong>
+            <p>Express account creation for all affiliates with webhook notifications</p>
+          </div>
+        </div>
+        <div class="completed-item">
+          <span class="completed-icon">✓</span>
+          <div>
+            <strong>Supreme Nutrition Checkout Script</strong>
+            <p>Custom checkout with clinic location field capture</p>
+          </div>
+        </div>
+        <div class="completed-item">
+          <span class="completed-icon">✓</span>
+          <div>
+            <strong>OAuth App for Cross-Subaccount Access</strong>
+            <p>Centralized token management with automatic refresh</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Recent Activity / Changelog -->
-    <section class="activity-section">
-      <h2>📋 Recent Changes</h2>
+    <!-- Pending Projects -->
+    <section class="section">
+      <h2>⏳ Pending Projects</h2>
+      <div class="pending-grid">
+        <div class="pending-item">
+          <span class="pending-icon">○</span>
+          <div>
+            <strong>Sales Reporting Dashboard</strong>
+            <p>Google Sheets integration for clinic location and discount code tracking</p>
+          </div>
+        </div>
+        <div class="pending-item">
+          <span class="pending-icon">○</span>
+          <div>
+            <strong>Error Notification System</strong>
+            <p>Slack/email alerts for failed transfers, missing products, API errors</p>
+          </div>
+        </div>
+        <div class="pending-item">
+          <span class="pending-icon">○</span>
+          <div>
+            <strong>Integration Testing Suite</strong>
+            <p>End-to-end tests: GHL → n8n → Stripe → payout confirmation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future / Roadmap -->
+    <section class="section">
+      <h2>🗺️ Roadmap / Future</h2>
+      <div class="roadmap">
+        <div class="roadmap-item">
+          <span class="roadmap-quarter">Q1 2026</span>
+          <div>
+            <strong>Multi-Subaccount Commission Rollout</strong>
+            <p>Extend commission payouts to all subaccounts beyond Supreme Nutrition</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <span class="roadmap-quarter">Q1 2026</span>
+          <div>
+            <strong>Daily Product Sync Automation</strong>
+            <p>6am EST sync to keep master spreadsheet in sync with wholesale products</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <span class="roadmap-quarter">Q2 2026</span>
+          <div>
+            <strong>Affiliate Performance Dashboard</strong>
+            <p>Revenue tracking, commission history, payout statements per affiliate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Backlog -->
+    <section class="section">
+      <h2>📋 Backlog</h2>
+      <div class="backlog">
+        <div class="backlog-item">Duplicate webhook call idempotency handling</div>
+        <div class="backlog-item">Fuzzy product name matching fallback</div>
+        <div class="backlog-item">Stripe API rate limit handling</div>
+        <div class="backlog-item">Product not found in catalog → notification</div>
+        <div class="backlog-item">No matching Stripe Connect account → alert</div>
+        <div class="backlog-item">Sandbox testing mode for Stripe transfers</div>
+      </div>
+    </section>
+
+    <!-- Changelog -->
+    <section class="section">
+      <h2>� Changelog</h2>
       <div class="changelog">
         <div class="changelog-entry">
-          <div class="changelog-date">Feb 3</div>
+          <div class="changelog-meta">
+            <span class="changelog-date">Feb 3, 2026</span>
+            <span class="changelog-time">2:15 PM</span>
+          </div>
           <div class="changelog-content">
-            <strong>GHL Import Template & SKU Sync</strong>
+            <strong>GHL Import Template & SKU Sync Workflow</strong>
             <p>Created CSV template for all 54 products with auto-generated handles. SKU sync workflow fetches from
               Wholesale and updates Google Sheets.</p>
             <span class="changelog-tag tag-onboarding">onboarding</span>
           </div>
         </div>
         <div class="changelog-entry">
-          <div class="changelog-date">Feb 3</div>
+          <div class="changelog-meta">
+            <span class="changelog-date">Feb 3, 2026</span>
+            <span class="changelog-time">10:30 AM</span>
+          </div>
           <div class="changelog-content">
             <strong>Daily Sync Spreadsheet Workflow</strong>
             <p>Scheduled 6am EST sync comparing products by SKU. Only adds new, updates changed prices. AI SEO for new
@@ -176,27 +208,44 @@
           </div>
         </div>
         <div class="changelog-entry">
-          <div class="changelog-date">Feb 2</div>
+          <div class="changelog-meta">
+            <span class="changelog-date">Feb 2, 2026</span>
+            <span class="changelog-time">4:00 PM</span>
+          </div>
           <div class="changelog-content">
-            <strong>SKU Management System</strong>
+            <strong>SKU Management System Implementation</strong>
             <p>Human-readable SKU format (TIRZ-B12-68MG-4ML). Consistent across wholesale and subaccounts for reliable
               deduplication.</p>
-            <span class="changelog-tag tag-onboarding">onboarding</span>
+            <span class="changelog-tag tag-workflows">workflows</span>
           </div>
         </div>
         <div class="changelog-entry">
-          <div class="changelog-date">Feb 2</div>
+          <div class="changelog-meta">
+            <span class="changelog-date">Feb 2, 2026</span>
+            <span class="changelog-time">11:00 AM</span>
+          </div>
           <div class="changelog-content">
-            <strong>Supreme Nutrition Sales Report</strong>
-            <p>WIP - Fields need troubleshooting for clinic location and discount code capture.</p>
+            <strong>Supreme Nutrition Sales Report (WIP)</strong>
+            <p>Fields need troubleshooting for clinic location and discount code capture.</p>
             <span class="changelog-tag tag-workflows">workflows</span>
+          </div>
+        </div>
+        <div class="changelog-entry">
+          <div class="changelog-meta">
+            <span class="changelog-date">Feb 1, 2026</span>
+            <span class="changelog-time">3:00 PM</span>
+          </div>
+          <div class="changelog-content">
+            <strong>Product Duplication Workflow with OpenAI SEO</strong>
+            <p>Clone products from Wholesale to subaccounts with AI-generated SEO descriptions.</p>
+            <span class="changelog-tag tag-onboarding">onboarding</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Key Accounts Reference -->
-    <section class="reference-section">
+    <!-- Quick Reference -->
+    <section class="section">
       <h2>🔗 Quick Reference</h2>
       <div class="reference-grid">
         <div class="reference-card">
