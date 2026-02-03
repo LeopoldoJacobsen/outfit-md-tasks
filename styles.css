@@ -468,6 +468,11 @@ header p {
   color: var(--accent-orange);
 }
 
+.tag-resolved {
+  background: rgba(63, 185, 80, 0.2);
+  color: var(--accent-green);
+}
+
 /* Backlog */
 .backlog {
   display: flex;
