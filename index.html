@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="container">
     <header>
       <h1 class="logo">OutfitMD</h1>
       <p>Team Status Dashboard</p>
-      <span class="last-updated">Last Updated: February 3, 2026 • 1:15 PM EST</span>
+      <span class="last-updated">Last Updated: February 3, 2026 • 2:10 PM EST</span>
     </header>
 
     <!-- Current Focus -->
     <section class="focus-section">
       <h2>🎯 Current Focus</h2>
-      <p>Setting up project infrastructure with Git submodules and team status dashboard for better visibility into ongoing work.</p>
+      <p>Setting up project infrastructure with status dashboard for team visibility. Configuring GitHub Pages
+        deployment and private repo access patterns.</p>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <h2>👥 Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <span class="role">CSM</span>
+          <strong>Connor</strong>
+          <small>Onboarding calls, pricing, walkthrough</small>
+        </div>
+        <div class="team-member">
+          <span class="role">PM</span>
+          <strong>Samira</strong>
+          <small>Day 2/6 checkpoints, dual confirmation</small>
+        </div>
+        <div class="team-member">
+          <span class="role">Tech</span>
+          <strong>Iliana</strong>
+          <small>GHL setup, A2P, Stripe, products</small>
+        </div>
+        <div class="team-member">
+          <span class="role">Design</span>
+          <strong>Mateus</strong>
+          <small>Branding, product images, collections</small>
+        </div>
+      </div>
     </section>
 
     <!-- Project Cards -->
     <div class="projects-grid">
-      
+
       <!-- Onboarding Project -->
       <div class="project-card">
         <div class="project-header">
@@ -33,26 +63,25 @@
           <span class="status-badge status-active">Active</span>
         </div>
         <p class="project-description">
-          Automated 7-day client onboarding flow including GHL subaccount creation, 
-          product import, A2P/SMS setup, and Stripe Connect configuration.
+          7-day client onboarding flow: GHL subaccount creation, product import via CSV, A2P/SMS setup, and Stripe
+          Connect configuration.
         </p>
+
+        <h4>✅ Completed</h4>
         <ul class="task-list">
-          <li>
-            <span class="task-icon task-done">✓</span>
-            <span>GHL Import template with SKU sync workflow</span>
-          </li>
-          <li>
-            <span class="task-icon task-done">✓</span>
-            <span>SKU Management System for product deduplication</span>
-          </li>
-          <li>
-            <span class="task-icon task-done">✓</span>
-            <span>Simplified product duplication workflow</span>
-          </li>
-          <li>
-            <span class="task-icon task-done">✓</span>
-            <span>OAuth App system for cross-subaccount operations</span>
-          </li>
+          <li><span class="task-icon task-done">✓</span> GHL Import template with SKU sync workflow</li>
+          <li><span class="task-icon task-done">✓</span> SKU Management System for product deduplication</li>
+          <li><span class="task-icon task-done">✓</span> CSV Export workflow (API doesn't save seoData)</li>
+          <li><span class="task-icon task-done">✓</span> OAuth App for cross-subaccount access</li>
+          <li><span class="task-icon task-done">✓</span> OpenAI SEO description generation</li>
+        </ul>
+
+        <h4>📋 Dependencies</h4>
+        <ul class="dependency-list">
+          <li><span class="dep-ok">●</span> n8n Cloud (outfitmd.app.n8n.cloud)</li>
+          <li><span class="dep-ok">●</span> GoHighLevel Agency API</li>
+          <li><span class="dep-ok">●</span> OpenAI Account</li>
+          <li><span class="dep-ok">●</span> Google Sheets OAuth</li>
         </ul>
       </div>
 
@@ -63,63 +92,149 @@
           <span class="status-badge status-wip">In Progress</span>
         </div>
         <p class="project-description">
-          Automated n8n workflows for commission payouts via Stripe Connect, 
-          product management, and checkout customizations.
+          Automated commission payouts via Stripe Connect, product import modules, and custom checkout scripts.
         </p>
+
+        <h4>🔴 Critical Issues</h4>
+        <ul class="task-list critical">
+          <li><span class="task-icon task-pending">○</span> Rewire workflow - sheet lookup before Calculate Commission
+          </li>
+          <li><span class="task-icon task-pending">○</span> Fix commission formula: retail − wholesale (NOT %)</li>
+          <li><span class="task-icon task-pending">○</span> Pass Stripe Connect ID to Transfer node</li>
+        </ul>
+
+        <h4>🔄 In Progress</h4>
         <ul class="task-list">
-          <li>
-            <span class="task-icon task-in-progress">◐</span>
-            <span>Supreme Nutrition Sales Report (fields troubleshooting)</span>
+          <li><span class="task-icon task-in-progress">◐</span> Supreme Nutrition Sales Report (fields troubleshooting)
           </li>
-          <li>
-            <span class="task-icon task-done">✓</span>
-            <span>Complete project documentation</span>
-          </li>
-          <li>
-            <span class="task-icon task-done">✓</span>
-            <span>Memory Bank structure (.agent/, CONTEXT.md)</span>
-          </li>
-          <li>
-            <span class="task-icon task-done">✓</span>
-            <span>Stripe onboarding URLs updated</span>
-          </li>
+        </ul>
+
+        <h4>✅ Completed</h4>
+        <ul class="task-list">
+          <li><span class="task-icon task-done">✓</span> Payout Commissions workflow active</li>
+          <li><span class="task-icon task-done">✓</span> Stripe Connect Onboarding active</li>
+          <li><span class="task-icon task-done">✓</span> Import OutfitMD Products module</li>
+          <li><span class="task-icon task-done">✓</span> Supreme Nutrition Checkout script</li>
+        </ul>
+
+        <h4>📋 Dependencies</h4>
+        <ul class="dependency-list">
+          <li><span class="dep-ok">●</span> n8n Cloud</li>
+          <li><span class="dep-ok">●</span> Stripe Connect (Express accounts)</li>
+          <li><span class="dep-ok">●</span> GoHighLevel CRM</li>
+          <li><span class="dep-warn">●</span> Stripe API Key (pending for transfers)</li>
+          <li><span class="dep-ok">●</span> Google Sheets (affiliate mapping)</li>
         </ul>
       </div>
     </div>
 
-    <!-- Recent Activity -->
+    <!-- Testing Status -->
+    <section class="testing-section">
+      <h2>🧪 Testing Status</h2>
+      <div class="tests-grid">
+        <div class="test-category">
+          <h4>Unit Tests</h4>
+          <ul class="test-list">
+            <li><span class="test-pending">○</span> Webhook POST data validation</li>
+            <li><span class="test-pending">○</span> Product name matching (exact + fuzzy)</li>
+            <li><span class="test-pending">○</span> Commission calculation: retail − wholesale</li>
+            <li><span class="test-pending">○</span> Stripe transfer creation (sandbox)</li>
+          </ul>
+        </div>
+        <div class="test-category">
+          <h4>Integration Tests</h4>
+          <ul class="test-list">
+            <li><span class="test-pending">○</span> GHL → n8n webhook fire</li>
+            <li><span class="test-pending">○</span> Product matching → wholesale price</li>
+            <li><span class="test-pending">○</span> Sheet lookup → Stripe Connect ID</li>
+            <li><span class="test-pending">○</span> End-to-end payment → payout</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Activity / Changelog -->
     <section class="activity-section">
-      <h2>📋 Recent Activity</h2>
-      <ul class="activity-list">
-        <li class="activity-item">
-          <span class="activity-repo">onboarding</span>
-          <span class="activity-message">feat: Add GHL import template and SKU sync workflow</span>
-        </li>
-        <li class="activity-item">
-          <span class="activity-repo">onboarding</span>
-          <span class="activity-message">feat: SKU Management System for product deduplication</span>
-        </li>
-        <li class="activity-item">
-          <span class="activity-repo">workflows</span>
-          <span class="activity-message">WIP: Supreme Nutrition Sales Report - fields need troubleshooting</span>
-        </li>
-        <li class="activity-item">
-          <span class="activity-repo">workflows</span>
-          <span class="activity-message">docs: Complete project documentation update</span>
-        </li>
-        <li class="activity-item">
-          <span class="activity-repo">workflows</span>
-          <span class="activity-message">fix: update Stripe onboarding URLs to outfitmd.com/success-page</span>
-        </li>
-      </ul>
+      <h2>📋 Recent Changes</h2>
+      <div class="changelog">
+        <div class="changelog-entry">
+          <div class="changelog-date">Feb 3</div>
+          <div class="changelog-content">
+            <strong>GHL Import Template & SKU Sync</strong>
+            <p>Created CSV template for all 54 products with auto-generated handles. SKU sync workflow fetches from
+              Wholesale and updates Google Sheets.</p>
+            <span class="changelog-tag tag-onboarding">onboarding</span>
+          </div>
+        </div>
+        <div class="changelog-entry">
+          <div class="changelog-date">Feb 3</div>
+          <div class="changelog-content">
+            <strong>Daily Sync Spreadsheet Workflow</strong>
+            <p>Scheduled 6am EST sync comparing products by SKU. Only adds new, updates changed prices. AI SEO for new
+              products only.</p>
+            <span class="changelog-tag tag-onboarding">onboarding</span>
+          </div>
+        </div>
+        <div class="changelog-entry">
+          <div class="changelog-date">Feb 2</div>
+          <div class="changelog-content">
+            <strong>SKU Management System</strong>
+            <p>Human-readable SKU format (TIRZ-B12-68MG-4ML). Consistent across wholesale and subaccounts for reliable
+              deduplication.</p>
+            <span class="changelog-tag tag-onboarding">onboarding</span>
+          </div>
+        </div>
+        <div class="changelog-entry">
+          <div class="changelog-date">Feb 2</div>
+          <div class="changelog-content">
+            <strong>Supreme Nutrition Sales Report</strong>
+            <p>WIP - Fields need troubleshooting for clinic location and discount code capture.</p>
+            <span class="changelog-tag tag-workflows">workflows</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Accounts Reference -->
+    <section class="reference-section">
+      <h2>🔗 Quick Reference</h2>
+      <div class="reference-grid">
+        <div class="reference-card">
+          <h4>Key Accounts</h4>
+          <table>
+            <tr>
+              <td>OutfitMD Main</td>
+              <td class="mono">j1UjdXZVmA1eKxSlihYc</td>
+            </tr>
+            <tr>
+              <td>Supreme Nutrition MD</td>
+              <td class="mono">ijcEVBMV3J4oDZK5FBUc</td>
+            </tr>
+          </table>
+        </div>
+        <div class="reference-card">
+          <h4>Endpoints</h4>
+          <table>
+            <tr>
+              <td>n8n Instance</td>
+              <td><a href="https://outfitmd.app.n8n.cloud" target="_blank">outfitmd.app.n8n.cloud</a></td>
+            </tr>
+            <tr>
+              <td>GHL Portal</td>
+              <td><a href="https://go.outfitmd.com/" target="_blank">go.outfitmd.com</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </section>
 
     <footer>
       <p>
-        Built with ❤️ by <a href="https://goglow.media" target="_blank">GoGlow Media</a> • 
+        Built with ❤️ by <a href="https://goglow.media" target="_blank">GoGlow Media</a> •
         <a href="https://github.com/LeopoldoJacobsen/outfit-md-tasks" target="_blank">View on GitHub</a>
       </p>
     </footer>
   </div>
 </body>
+
 </html>
