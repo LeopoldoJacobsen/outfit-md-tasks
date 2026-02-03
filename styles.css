@@ -270,6 +270,11 @@ header p {
   color: var(--accent-purple);
 }
 
+.priority-med {
+  background: rgba(210, 153, 34, 0.2);
+  color: var(--accent-yellow);
+}
+
 /* Progress Bar */
 .progress-bar {
   height: 4px;
