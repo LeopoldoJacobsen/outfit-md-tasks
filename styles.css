@@ -378,27 +378,61 @@ header p {
   border-bottom: 1px solid var(--border-color);
 }
 
-/* Compact Changelog */
-.changelog-compact {
+/* Detailed Changelog */
+.changelog-detailed {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 1rem;
 }
 
-.log-entry {
+.changelog-entry {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 3px solid var(--accent-blue);
+}
+
+.changelog-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.5rem 0.75rem;
-  background: var(--bg-secondary);
-  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.changelog-date {
+  font-weight: 600;
+  color: var(--accent-blue);
   font-size: 0.8rem;
 }
 
-.log-date {
-  font-weight: 600;
-  color: var(--accent-blue);
-  min-width: 45px;
+.changelog-time {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.changelog-entry strong {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.changelog-desc {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.changelog-note {
+  font-size: 0.75rem;
+  color: var(--accent-green);
+  margin: 0;
+}
+
+.changelog-blocker {
+  font-size: 0.75rem;
+  color: var(--accent-yellow);
+  margin: 0;
 }
 
 .log-time {

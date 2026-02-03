@@ -188,7 +188,7 @@
 
         <div class="kanban-card done">
           <strong>Product Import via CSV</strong>
-          <p>54 products with AI SEO descriptions</p>
+          <p>56 products with unique SKUs</p>
         </div>
 
         <div class="kanban-card done">
@@ -232,37 +232,71 @@
     <!-- Changelog -->
     <section class="section">
       <h2>📜 Changelog</h2>
-      <div class="changelog-compact">
-        <div class="log-entry">
-          <span class="log-date">Feb 3</span>
-          <span class="log-time">2:15 PM</span>
-          <span class="log-text">GHL Import Template & SKU Sync Workflow</span>
-          <span class="log-tag tag-onboarding">onboarding</span>
+      <div class="changelog-detailed">
+
+        <div class="changelog-entry">
+          <div class="changelog-header">
+            <span class="changelog-date">Feb 3, 2026</span>
+            <span class="changelog-time">2:15 PM</span>
+            <span class="log-tag tag-onboarding">onboarding</span>
+          </div>
+          <strong>GHL Import Template & SKU Sync Workflow</strong>
+          <p class="changelog-desc">Created CSV template for all 56 products with auto-generated handles. Built n8n
+            workflow to fetch SKUs from Wholesale API and sync to Google Sheets master.</p>
+          <p class="changelog-note">✅ Working: Template ready for new client imports.</p>
         </div>
-        <div class="log-entry">
-          <span class="log-date">Feb 3</span>
-          <span class="log-time">10:30 AM</span>
-          <span class="log-text">Daily Sync Spreadsheet Workflow</span>
-          <span class="log-tag tag-onboarding">onboarding</span>
+
+        <div class="changelog-entry">
+          <div class="changelog-header">
+            <span class="changelog-date">Feb 3, 2026</span>
+            <span class="changelog-time">10:30 AM</span>
+            <span class="log-tag tag-onboarding">onboarding</span>
+          </div>
+          <strong>Daily Sync Spreadsheet Workflow</strong>
+          <p class="changelog-desc">Scheduled 6am EST sync comparing products by SKU. Only adds new products, updates
+            changed prices. AI SEO generation for new products only.</p>
+          <p class="changelog-note">✅ Working: Keeps master sheet in sync with Wholesale.</p>
         </div>
-        <div class="log-entry">
-          <span class="log-date">Feb 2</span>
-          <span class="log-time">4:00 PM</span>
-          <span class="log-text">SKU Management System Implementation</span>
-          <span class="log-tag tag-workflows">workflows</span>
+
+        <div class="changelog-entry">
+          <div class="changelog-header">
+            <span class="changelog-date">Feb 2, 2026</span>
+            <span class="changelog-time">4:00 PM</span>
+            <span class="log-tag tag-workflows">workflows</span>
+          </div>
+          <strong>SKU Management System Implementation</strong>
+          <p class="changelog-desc">Defined human-readable SKU format (TIRZ-B12-68MG-4ML). Created batch update workflow
+            to assign SKUs to all 56 products on OutfitMD main account.</p>
+          <p class="changelog-blocker">⚠️ Impediment: Existing subaccounts don't have SKUs yet — need propagation
+            workflow.</p>
         </div>
-        <div class="log-entry">
-          <span class="log-date">Feb 2</span>
-          <span class="log-time">11:00 AM</span>
-          <span class="log-text">Supreme Nutrition Sales Report (WIP)</span>
-          <span class="log-tag tag-workflows">workflows</span>
+
+        <div class="changelog-entry">
+          <div class="changelog-header">
+            <span class="changelog-date">Feb 2, 2026</span>
+            <span class="changelog-time">11:00 AM</span>
+            <span class="log-tag tag-workflows">workflows</span>
+          </div>
+          <strong>Supreme Nutrition Sales Report</strong>
+          <p class="changelog-desc">Started sales reporting workflow to log orders to Google Sheets. Basic fields (order
+            ID, amount, date) are publishing.</p>
+          <p class="changelog-blocker">⚠️ Impediment: Clinic location field not populating — need additional webhook
+            paths. Discount code field missing from payload.</p>
         </div>
-        <div class="log-entry">
-          <span class="log-date">Feb 1</span>
-          <span class="log-time">3:00 PM</span>
-          <span class="log-text">Product Duplication with OpenAI SEO</span>
-          <span class="log-tag tag-onboarding">onboarding</span>
+
+        <div class="changelog-entry">
+          <div class="changelog-header">
+            <span class="changelog-date">Feb 1, 2026</span>
+            <span class="changelog-time">3:00 PM</span>
+            <span class="log-tag tag-onboarding">onboarding</span>
+          </div>
+          <strong>Product Duplication with OpenAI SEO</strong>
+          <p class="changelog-desc">Built workflow to clone products from Wholesale to subaccounts. OpenAI generates
+            SEO-optimized titles and descriptions for each product.</p>
+          <p class="changelog-blocker">⚠️ Impediment: GHL API sometimes returns internal server error — switched to CSV
+            Export Bridge pattern as fallback.</p>
         </div>
+
       </div>
     </section>
 
