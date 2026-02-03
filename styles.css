@@ -243,6 +243,24 @@ header p {
   color: var(--accent-red);
 }
 
+.priority-deadline {
+  background: rgba(248, 81, 73, 0.3);
+  color: var(--accent-red);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
 .quarter {
   font-size: 0.6rem;
   font-weight: 600;
