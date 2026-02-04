@@ -6,84 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peptide Therapy Informed Consent | Supreme Nutrition</title>
     <style>
-        /* Print-optimized styles - Clean white paper */
-        @media print {
-            * {
-                background: white !important;
-                box-shadow: none !important;
-            }
-
-            html,
-            body {
-                width: 8.5in;
-                height: 11in;
-                margin: 0;
-                padding: 0;
-            }
-
-            body {
-                font-size: 11pt;
-                line-height: 1.5;
-            }
-
-            .document {
-                max-width: none;
-                width: 100%;
-                margin: 0;
-                padding: 0;
-            }
-
-            .page-break {
-                page-break-before: always;
-                height: 0;
-            }
-
-            .no-print {
-                display: none !important;
-            }
-
-            .consent-section {
-                page-break-inside: avoid;
-                margin-bottom: 18px;
-            }
-
-            .signature-section {
-                page-break-inside: avoid;
-                border: none !important;
-            }
-
-            .patient-info {
-                page-break-inside: avoid;
-                border: none !important;
-            }
-
-            .page-break-indicator {
-                display: none;
-            }
-
-            .checkbox-line {
-                border: none !important;
-            }
-
-            .document-header {
-                border: none !important;
-            }
-
-            .consent-section h2 {
-                border: none !important;
-            }
-
-            .document-footer {
-                border: none !important;
-            }
-
-            @page {
-                size: letter;
-                margin: 0.5in;
-            }
-        }
-
-        /* Screen styles */
+        /* Base styles for both screen and print */
         * {
             margin: 0;
             padding: 0;
@@ -92,278 +15,266 @@
 
         body {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 12pt;
+            font-size: 11pt;
             line-height: 1.6;
-            color: #1a1a1a;
-            background: #f5f5f5;
-            padding: 20px;
+            color: #000;
         }
 
         .document {
-            max-width: 8.5in;
+            max-width: 7.5in;
             margin: 0 auto;
-            background: white;
-            padding: 1in;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 0.5in;
         }
 
         /* Logo */
         .logo-container {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .company-logo {
-            max-width: 125px;
+            max-width: 120px;
             height: auto;
         }
 
         /* Header */
         .document-header {
             text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #1a1a1a;
-            padding-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .document-header h1 {
-            font-size: 18pt;
+            font-size: 16pt;
             font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* Patient info section */
+        /* Patient info grid */
         .patient-info {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #f9f9f9;
-            border: 1px solid #ddd;
+            gap: 12px 30px;
+            margin-bottom: 25px;
         }
 
         .field {
             display: flex;
-            flex-direction: column;
-            gap: 5px;
+            align-items: baseline;
+            gap: 8px;
         }
 
         .field label {
             font-weight: bold;
             font-size: 10pt;
-            text-transform: uppercase;
-            color: #555;
+            white-space: nowrap;
         }
 
         .field-line {
-            border-bottom: 1px solid #333;
-            min-height: 25px;
-            padding: 5px 0;
+            flex: 1;
+            border-bottom: 1px solid #000;
+            min-height: 18px;
         }
 
         /* Consent sections */
         .consent-section {
-            margin-bottom: 25px;
+            margin-bottom: 18px;
         }
 
         .consent-section h2 {
-            font-size: 12pt;
+            font-size: 11pt;
             font-weight: bold;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #ccc;
+            margin-bottom: 6px;
         }
 
         .consent-section p {
             text-align: justify;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
         .checkbox-line {
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-top: 10px;
-            padding: 10px;
-            background: #f9f9f9;
-            border-left: 3px solid #333;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
         }
 
         .checkbox {
-            width: 18px;
-            height: 18px;
-            border: 2px solid #333;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #000;
             flex-shrink: 0;
-            margin-top: 2px;
         }
 
         .checkbox-text {
-            font-weight: 500;
+            font-size: 10pt;
         }
 
         /* Signature section */
         .signature-section {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #1a1a1a;
+            margin-top: 30px;
         }
 
         .signature-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 40px;
-            margin-top: 20px;
-        }
-
-        .signature-field {
-            display: flex;
-            flex-direction: column;
+            margin-top: 15px;
         }
 
         .signature-field label {
             font-weight: bold;
             font-size: 10pt;
-            text-transform: uppercase;
-            color: #555;
+            display: block;
             margin-bottom: 5px;
         }
 
         .signature-line {
-            border-bottom: 1px solid #333;
-            min-height: 40px;
+            border-bottom: 1px solid #000;
+            height: 30px;
         }
 
-        /* Page break indicator */
-        .page-break-indicator {
-            border-top: 2px dashed #ccc;
-            margin: 40px 0;
-            position: relative;
-            text-align: center;
-        }
-
-        .page-break-indicator span {
-            background: white;
-            padding: 0 15px;
-            position: relative;
-            top: -10px;
-            color: #888;
-            font-size: 9pt;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Print button */
-        .print-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 12px 24px;
-            background: #1a1a1a;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            cursor: pointer;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .print-button:hover {
-            background: #333;
+        /* Page break */
+        .page-break {
+            page-break-before: always;
         }
 
         /* Footer */
         .document-footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
+            margin-top: 30px;
             text-align: center;
             font-size: 9pt;
-            color: #666;
+            color: #333;
+        }
+
+        /* Print button - screen only */
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Screen-only styles */
+        @media screen {
+            body {
+                background: #f0f0f0;
+                padding: 20px;
+            }
+
+            .document {
+                background: #fff;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .print-button {
+                display: none;
+            }
+
+            body {
+                background: #fff;
+            }
+
+            .document {
+                max-width: none;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            .consent-section {
+                page-break-inside: avoid;
+            }
+
+            .signature-section {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                size: letter;
+                margin: 0.5in;
+            }
         }
     </style>
 </head>
 
 <body>
-    <button class="print-button no-print" onclick="window.print()">🖨️ Print / Save PDF</button>
+    <button class="print-button" onclick="window.print()">Print / Save PDF</button>
 
     <div class="document">
-        <!-- Logo -->
         <div class="logo-container">
             <img src="supreme-nutrition-logo.png" alt="Supreme Nutrition" class="company-logo">
         </div>
 
-        <!-- Document Header -->
         <header class="document-header">
-            <h1>PEPTIDE THERAPY INFORMED CONSENT</h1>
+            <h1>Peptide Therapy Informed Consent</h1>
         </header>
 
-        <!-- Patient Information -->
         <section class="patient-info">
             <div class="field">
-                <label>Patient Name</label>
+                <label>Patient Name:</label>
                 <div class="field-line"></div>
             </div>
             <div class="field">
-                <label>Date of Birth</label>
+                <label>DOB:</label>
                 <div class="field-line"></div>
             </div>
             <div class="field">
-                <label>State of Residence</label>
+                <label>State:</label>
                 <div class="field-line"></div>
             </div>
             <div class="field">
-                <label>Date</label>
+                <label>Date:</label>
                 <div class="field-line"></div>
             </div>
         </section>
 
-        <!-- Section 1 -->
         <section class="consent-section">
-            <h2>1. CARE MODEL &amp; TELEHEALTH</h2>
+            <h2>1. Care Model &amp; Telehealth</h2>
             <p>I understand that Supreme Nutrition™, using OutfitMD™ telehealth services, is a healthcare technology and
-                administrative services platform and does not
-                practice medicine. Medical services, prescriptions, and treatment decisions are made solely by licensed
-                healthcare providers, which may be delivered via telehealth by providers licensed in states different
-                from my own.</p>
-            <p>I consent to receive care via telehealth and understand its limitations.</p>
+                administrative services platform and does not practice medicine. Medical services, prescriptions, and
+                treatment decisions are made solely by licensed healthcare providers, which may be delivered via
+                telehealth by providers licensed in states different from my own. I consent to receive care via
+                telehealth and understand its limitations.</p>
             <div class="checkbox-line">
                 <div class="checkbox"></div>
                 <span class="checkbox-text">I consent to telehealth services</span>
             </div>
         </section>
 
-        <!-- Section 2 -->
         <section class="consent-section">
-            <h2>2. PEPTIDE THERAPY &amp; REGULATORY STATUS</h2>
+            <h2>2. Peptide Therapy &amp; Regulatory Status</h2>
             <p>I understand that peptide therapy involves short chains of amino acids prescribed by a licensed provider
                 and that some peptides may be prescribed off-label and/or are not approved by the U.S. Food and Drug
                 Administration (FDA) for the intended use. The FDA may not have evaluated these peptides for safety,
-                efficacy, or long-term outcomes.</p>
-            <p>No guarantee of results has been made.</p>
+                efficacy, or long-term outcomes. No guarantee of results has been made.</p>
             <div class="checkbox-line">
                 <div class="checkbox"></div>
                 <span class="checkbox-text">I understand the regulatory status of peptide therapy</span>
             </div>
         </section>
 
-        <!-- Section 3 -->
         <section class="consent-section">
-            <h2>3. RISKS, BENEFITS &amp; LIMITATIONS</h2>
+            <h2>3. Risks, Benefits &amp; Limitations</h2>
             <p>I understand that potential benefits are variable and not guaranteed. I also understand that peptide
                 therapy carries known and unknown risks, including but not limited to injection site reactions, fatigue,
-                headache, nausea, hormonal or metabolic changes, allergic reactions, and unanticipated side effects.</p>
-            <p>Peptide therapy is not emergency care and does not replace primary or specialty medical treatment.</p>
+                headache, nausea, hormonal or metabolic changes, allergic reactions, and unanticipated side effects.
+                Peptide therapy is not emergency care and does not replace primary or specialty medical treatment.</p>
             <div class="checkbox-line">
                 <div class="checkbox"></div>
                 <span class="checkbox-text">I understand the risks and limitations</span>
             </div>
         </section>
 
-        <!-- Section 4 -->
         <section class="consent-section">
-            <h2>4. PATIENT RESPONSIBILITIES</h2>
+            <h2>4. Patient Responsibilities</h2>
             <p>I agree to provide accurate medical information, follow all prescribed instructions, promptly report
                 adverse effects, and not misuse or share prescribed peptides.</p>
             <div class="checkbox-line">
@@ -372,23 +283,20 @@
             </div>
         </section>
 
-        <!-- Section 5 -->
         <section class="consent-section">
-            <h2>5. ASSUMPTION OF RISK &amp; RELEASE</h2>
+            <h2>5. Assumption of Risk &amp; Release</h2>
             <p>I voluntarily assume all risks associated with peptide therapy, whether known or unknown, and agree to
                 release and hold harmless Supreme Nutrition™, OutfitMD™, their affiliates, licensed providers,
-                pharmacies, and partners from
-                any claims arising from treatment, except in cases of gross negligence or willful misconduct, to the
-                fullest extent permitted by law.</p>
+                pharmacies, and partners from any claims arising from treatment, except in cases of gross negligence or
+                willful misconduct, to the fullest extent permitted by law.</p>
             <div class="checkbox-line">
                 <div class="checkbox"></div>
                 <span class="checkbox-text">I accept and assume all risks</span>
             </div>
         </section>
 
-        <!-- Section 6 -->
         <section class="consent-section">
-            <h2>6. ELECTRONIC CONSENT</h2>
+            <h2>6. Electronic Consent</h2>
             <p>By signing electronically, I confirm that I have read and understand this consent, had the opportunity to
                 ask questions, and voluntarily agree to proceed. My electronic signature constitutes a legal signature.
             </p>
@@ -398,7 +306,6 @@
             </div>
         </section>
 
-        <!-- Primary Signature -->
         <section class="signature-section">
             <div class="signature-grid">
                 <div class="signature-field">
@@ -412,26 +319,20 @@
             </div>
         </section>
 
-        <!-- Page Break for Print -->
-        <div class="page-break-indicator page-break">
-            <span>Page Break</span>
-        </div>
+        <div class="page-break"></div>
 
-        <!-- Self-Administration Section -->
         <section class="consent-section">
-            <h2>SELF-ADMINISTRATION &amp; INJECTION ACKNOWLEDGMENT</h2>
+            <h2>Self-Administration &amp; Injection Acknowledgment</h2>
             <p>If prescribed injectable peptide therapy, I acknowledge that I am responsible for proper storage,
                 handling, preparation, and self-administration. Supreme Nutrition™ and OutfitMD™ do not supervise
-                injections and are not
-                responsible for improper technique. I agree to follow dosing instructions exactly and not alter dosing
-                without provider approval.</p>
+                injections and are not responsible for improper technique. I agree to follow dosing instructions exactly
+                and not alter dosing without provider approval.</p>
             <div class="checkbox-line">
                 <div class="checkbox"></div>
                 <span class="checkbox-text">I accept responsibility for self-administration</span>
             </div>
         </section>
 
-        <!-- Final Signature -->
         <section class="signature-section">
             <div class="signature-grid">
                 <div class="signature-field">
@@ -445,10 +346,8 @@
             </div>
         </section>
 
-        <!-- Document Footer -->
         <footer class="document-footer">
-            <p>Supreme Nutrition™ — Peptide Therapy Informed Consent Form</p>
-            <p>This document is confidential and intended for the named patient only.</p>
+            <p>Supreme Nutrition™ — Peptide Therapy Informed Consent</p>
         </footer>
     </div>
 </body>
