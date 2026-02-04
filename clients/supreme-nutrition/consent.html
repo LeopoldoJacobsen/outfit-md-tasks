@@ -6,25 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peptide Therapy Informed Consent | Supreme Nutrition</title>
     <style>
-        /* Print-optimized styles */
+        /* Print-optimized styles - Clean white paper */
         @media print {
             * {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
+                background: white !important;
+                box-shadow: none !important;
             }
 
             html,
             body {
                 width: 8.5in;
                 height: 11in;
+                margin: 0;
+                padding: 0;
             }
 
             body {
                 font-size: 11pt;
                 line-height: 1.5;
-                background: white;
-                padding: 0;
-                margin: 0;
             }
 
             .document {
@@ -32,14 +31,10 @@
                 width: 100%;
                 margin: 0;
                 padding: 0;
-                box-shadow: none;
-                background: white;
             }
 
             .page-break {
                 page-break-before: always;
-                margin: 0;
-                padding: 0;
                 height: 0;
             }
 
@@ -54,41 +49,32 @@
 
             .signature-section {
                 page-break-inside: avoid;
-                border-top: 1px solid #333;
+                border: none !important;
             }
 
             .patient-info {
                 page-break-inside: avoid;
-                background: white !important;
                 border: none !important;
             }
 
             .page-break-indicator {
-                border: none;
-                margin: 0;
-                padding: 0;
-                height: 0;
-            }
-
-            .page-break-indicator span {
                 display: none;
             }
 
             .checkbox-line {
-                background: white !important;
-                border-left: 2px solid #333 !important;
+                border: none !important;
             }
 
             .document-header {
-                border-bottom: 1px solid #333;
+                border: none !important;
             }
 
             .consent-section h2 {
-                border-bottom: none;
+                border: none !important;
             }
 
             .document-footer {
-                border-top: 1px solid #333;
+                border: none !important;
             }
 
             @page {
