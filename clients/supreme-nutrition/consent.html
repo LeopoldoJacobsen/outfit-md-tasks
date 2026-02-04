@@ -13,9 +13,15 @@
                 print-color-adjust: exact !important;
             }
 
+            html,
             body {
-                font-size: 12pt;
-                line-height: 1.6;
+                width: 8.5in;
+                height: 11in;
+            }
+
+            body {
+                font-size: 11pt;
+                line-height: 1.5;
                 background: white;
                 padding: 0;
                 margin: 0;
@@ -23,13 +29,17 @@
 
             .document {
                 max-width: none;
+                width: 100%;
                 margin: 0;
-                padding: 0.75in;
+                padding: 0;
                 box-shadow: none;
             }
 
             .page-break {
                 page-break-before: always;
+                margin: 0;
+                padding: 0;
+                height: 0;
             }
 
             .no-print {
@@ -38,6 +48,7 @@
 
             .consent-section {
                 page-break-inside: avoid;
+                margin-bottom: 18px;
             }
 
             .signature-section {
@@ -46,19 +57,18 @@
 
             .patient-info {
                 page-break-inside: avoid;
+                background: #f9f9f9 !important;
             }
 
             .page-break-indicator {
                 border: none;
                 margin: 0;
+                padding: 0;
+                height: 0;
             }
 
             .page-break-indicator span {
                 display: none;
-            }
-
-            .patient-info {
-                background: #f9f9f9 !important;
             }
 
             .checkbox-line {
@@ -66,8 +76,8 @@
             }
 
             @page {
-                margin: 0;
                 size: letter;
+                margin: 0.75in;
             }
         }
 
