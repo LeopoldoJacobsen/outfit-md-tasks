@@ -16,7 +16,7 @@
     <header>
       <h1 class="logo">OutfitMD</h1>
       <p>Project Status Dashboard</p>
-      <span class="last-updated">Last Updated: February 5, 2026 • 9:11 PM EST</span>
+      <span class="last-updated">Last Updated: February 6, 2026 • 2:34 PM EST</span>
     </header>
 
     <!-- Summary Stats -->
@@ -34,7 +34,7 @@
         <span class="stat-label">Open</span>
       </div>
       <div class="stat stat-done">
-        <span class="stat-number">6</span>
+        <span class="stat-number">8</span>
         <span class="stat-label">Done</span>
       </div>
     </div>
@@ -42,9 +42,9 @@
     <!-- Current Focus -->
     <section class="focus-section">
       <h2>🎯 Current Focus</h2>
-      <p><strong>Supreme Nutrition Commission System Complete</strong> — Built automated commission calculation system
-        with 49 orders processed. $19,964.30 retail → $9,500.10 commission. Includes clinic location extraction and
-        product price matching.</p>
+      <p><strong>Commission Payout System Finalization</strong> — João syncing subaccounts and implementing Slack/email
+        alerts for failed payouts. Juan finalizing location referral fix. Testing and QC to prevent over/underpayment.
+      </p>
     </section>
 
     <!-- Kanban Board -->
@@ -124,66 +124,59 @@
           </div>
           <p>Automated affiliate payouts via Stripe Connect</p>
           <div class="progress-bar">
-            <div class="progress-fill" style="width: 40%"></div>
+            <div class="progress-fill" style="width: 80%"></div>
           </div>
-          <span class="progress-text">40% complete</span>
+          <span class="progress-text">80% complete</span>
           <ul class="card-tasks">
             <li class="task-done">✓ Workflow structure</li>
             <li class="task-done">✓ Stripe Connect setup</li>
-            <li class="task-active">→ SKU product matching</li>
-            <li class="task-todo">○ Commission formula fix</li>
-            <li class="task-todo">○ Sheet lookup rewire</li>
+            <li class="task-done">✓ SKU product matching</li>
+            <li class="task-done">✓ Commission formula</li>
+            <li class="task-done">✓ Sheet lookup rewire</li>
+            <li class="task-active">→ Juan: Location referral fix</li>
+            <li class="task-active">→ João: Subaccount sync + Slack/email alerts</li>
+            <li class="task-active">→ Testing & QC</li>
           </ul>
         </div>
 
         <div class="kanban-card">
           <div class="card-header">
-            <strong>SKU Management System</strong>
+            <strong>New Snapshot with Supreme Nutrition Automations</strong>
             <span class="priority priority-high">HIGH</span>
           </div>
-          <p>56 unique SKUs for commission calculation matching</p>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 70%"></div>
-          </div>
-          <span class="progress-text">70% complete</span>
+          <p>Create updated snapshot including new automations</p>
           <ul class="card-tasks">
-            <li class="task-done">✓ 56 unique SKUs created on OutfitMD</li>
-            <li class="task-done">✓ SKU format (TIRZ-B12-68MG-4ML)</li>
-            <li class="task-done">✓ Synced to Google Sheets master</li>
-            <li class="task-done">✓ New accounts import with SKUs</li>
-            <li class="task-active">→ Propagate to existing subaccounts</li>
+            <li class="task-active">→ Finalize testing for doctors consult</li>
+            <li class="task-active">→ Remove shipping fee for doctor consultations</li>
+            <li class="task-todo">○ Create snapshot</li>
           </ul>
         </div>
 
 
+
+        <div class="kanban-card">
+          <div class="card-header">
+            <strong>OutfitMD Product Inconsistencies</strong>
+            <span class="priority priority-med">MED</span>
+          </div>
+          <p>Check and fix product inconsistencies</p>
+          <ul class="card-tasks">
+            <li class="task-done">✓ Checked for inconsistencies</li>
+            <li class="task-done">✓ Fixed identified issues</li>
+            <li class="task-active">→ Remove shipping costs for doctor consultation</li>
+          </ul>
+        </div>
 
         <div class="kanban-card">
           <div class="card-header">
             <strong>Product Import via CSV</strong>
-            <span class="priority priority-deadline">DUE TODAY</span>
+            <span class="priority priority-low">HANDOFF</span>
           </div>
-          <p>56 products with unique SKUs for all subaccounts</p>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 95%"></div>
-          </div>
-          <span class="progress-text">95% complete</span>
+          <p>João finishing CSV for Ileana to import next week</p>
           <ul class="card-tasks">
             <li class="task-done">✓ CSV template created</li>
-            <li class="task-done">✓ 56 unique SKUs assigned</li>
-            <li class="task-done">✓ GHL import format ready</li>
-            <li class="task-active">→ Final validation</li>
-          </ul>
-        </div>
-
-        <div class="kanban-card">
-          <div class="card-header">
-            <strong>Stripe Charge Name Investigation</strong>
-            <span class="priority priority-med">MED</span>
-          </div>
-          <p>Wrong company name appearing on subaccount charges</p>
-          <ul class="card-tasks">
-            <li class="task-active">→ Investigate source of incorrect name</li>
-            <li class="task-todo">○ Update Stripe statement descriptor</li>
+            <li class="task-active">→ João: Finalizing CSV</li>
+            <li class="task-todo">○ Ileana: Manual import next week</li>
           </ul>
         </div>
       </div>
@@ -192,7 +185,7 @@
       <div class="kanban-column">
         <div class="column-header column-done">
           <h3>✅ Done</h3>
-          <span class="column-count">6</span>
+          <span class="column-count">8</span>
         </div>
 
         <div class="kanban-card done">
@@ -202,8 +195,20 @@
         </div>
 
         <div class="kanban-card done">
+          <strong>SKU Management System</strong>
+          <p>56 unique SKUs created, formatted (TIRZ-B12-68MG-4ML), synced to Google Sheets, propagated to subaccounts.
+          </p>
+        </div>
+
+        <div class="kanban-card done">
           <strong>Patient Information Portal</strong>
-          <p>Patient-facing portal at patients.outfitmd.com with medication info, storage, dosing, and disclaimers.</p>
+          <p>Patient-facing portal at patients.outfitmd.com with medication info, storage, dosing, disclaimers, and
+            updated video.</p>
+        </div>
+
+        <div class="kanban-card done">
+          <strong>Stripe Charge Name Fix</strong>
+          <p>Removed "Alivia" statement descriptors from all products. Charges now display correct company names.</p>
         </div>
 
         <div class="kanban-card done">
@@ -235,6 +240,25 @@
     <section class="section">
       <h2>📜 Changelog</h2>
       <div class="changelog-detailed">
+
+        <div class="changelog-entry">
+          <div class="changelog-header">
+            <span class="changelog-date">Feb 6, 2026</span>
+            <span class="changelog-time">2:34 PM</span>
+            <span class="log-tag tag-workflows">progress</span>
+          </div>
+          <strong>Commission Payout System — 80% Complete</strong>
+          <p class="changelog-desc">
+            <strong>Completed:</strong> SKU product matching, commission formula, and sheet lookup rewire all done.<br>
+            <strong>In Progress:</strong> Juan fixing location referral issue. João syncing subaccounts and implementing
+            Slack/email alerts for failed payouts.<br>
+            <strong>SKU System:</strong> Marked complete — 56 SKUs propagated to all subaccounts.<br>
+            <strong>Stripe Fix:</strong> Removed "Alivia" statement descriptors from all products. Complete.<br>
+            <strong>Patient Portal:</strong> Video reviewed and updated. Fully complete.
+          </p>
+          <p class="changelog-note">⏳ Pending: Testing & QC to prevent over/underpayment. New snapshot creation after
+            shipping fee removal.</p>
+        </div>
 
         <div class="changelog-entry">
           <div class="changelog-header">
