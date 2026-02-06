@@ -16,7 +16,7 @@
     <header>
       <h1 class="logo">OutfitMD</h1>
       <p>Project Status Dashboard</p>
-      <span class="last-updated">Last Updated: February 4, 2026 • 11:01 PM EST</span>
+      <span class="last-updated">Last Updated: February 5, 2026 • 9:11 PM EST</span>
     </header>
 
     <!-- Summary Stats -->
@@ -30,11 +30,11 @@
         <span class="stat-label">Pending</span>
       </div>
       <div class="stat stat-open">
-        <span class="stat-number">5</span>
+        <span class="stat-number">4</span>
         <span class="stat-label">Open</span>
       </div>
       <div class="stat stat-done">
-        <span class="stat-number">5</span>
+        <span class="stat-number">6</span>
         <span class="stat-label">Done</span>
       </div>
     </div>
@@ -42,8 +42,9 @@
     <!-- Current Focus -->
     <section class="focus-section">
       <h2>🎯 Current Focus</h2>
-      <p><strong>Patient Information Portal Launched</strong> — Created patient-facing portal at patients.outfitmd.com
-        with medication info, storage instructions, beginner dosage guidelines, and provider-override disclaimers.</p>
+      <p><strong>Supreme Nutrition Commission System Complete</strong> — Built automated commission calculation system
+        with 49 orders processed. $19,964.30 retail → $9,500.10 commission. Includes clinic location extraction and
+        product price matching.</p>
     </section>
 
     <!-- Kanban Board -->
@@ -113,7 +114,7 @@
       <div class="kanban-column">
         <div class="column-header column-open">
           <h3>🔄 Open</h3>
-          <span class="column-count">5</span>
+          <span class="column-count">4</span>
         </div>
 
         <div class="kanban-card">
@@ -154,27 +155,7 @@
           </ul>
         </div>
 
-        <div class="kanban-card">
-          <div class="card-header">
-            <strong>Sales Reporting Dashboard</strong>
-            <span class="priority priority-deadline">DUE FRI</span>
-          </div>
-          <p>Supreme Nutrition — Populate full spreadsheet with order data</p>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 30%"></div>
-          </div>
-          <span class="progress-text">30% complete</span>
-          <ul class="card-tasks">
-            <li class="task-done">✓ Basic fields publishing</li>
-            <li class="task-done">✓ Order webhook connected</li>
-            <li class="task-active">→ Additional automation paths</li>
-            <li class="task-todo">○ Clinic location field</li>
-            <li class="task-todo">○ Discount code capture</li>
-            <li class="task-todo">○ Wholesale total field</li>
-            <li class="task-todo">○ Backfill January sales</li>
-            <li class="task-todo">○ Full spreadsheet population</li>
-          </ul>
-        </div>
+
 
         <div class="kanban-card">
           <div class="card-header">
@@ -211,7 +192,13 @@
       <div class="kanban-column">
         <div class="column-header column-done">
           <h3>✅ Done</h3>
-          <span class="column-count">5</span>
+          <span class="column-count">6</span>
+        </div>
+
+        <div class="kanban-card done">
+          <strong>Supreme Nutrition Commission System</strong>
+          <p>Automated commission calculation: 49 orders, $19,964 retail → $9,500 commission. Scripts, docs, workflow
+            published.</p>
         </div>
 
         <div class="kanban-card done">
@@ -248,6 +235,26 @@
     <section class="section">
       <h2>📜 Changelog</h2>
       <div class="changelog-detailed">
+
+        <div class="changelog-entry">
+          <div class="changelog-header">
+            <span class="changelog-date">Feb 5, 2026</span>
+            <span class="changelog-time">9:11 PM</span>
+            <span class="log-tag tag-resolved">resolved</span>
+          </div>
+          <strong>Supreme Nutrition Commission System — Complete</strong>
+          <p class="changelog-desc">
+            <strong>Commission Calculator:</strong> Built automated system fetching all paid orders via GHL API with
+            product price matching against OutfitMD wholesale prices.<br>
+            <strong>Product Mappings:</strong> Implemented manual mappings for dosage variants (CJC-1295 10mg→2×5mg,
+            Wolverine 10mg→2×5mg, Tirzepatide 1mL→0.5×2mL).<br>
+            <strong>Clinic Location:</strong> Extracts from custom field with city fallback (Wilmington, Athens, Panama
+            City).<br>
+            <strong>Results:</strong> 49 orders processed | $19,964.30 retail → $9,500.10 commission.
+          </p>
+          <p class="changelog-note">✅ Complete: Scripts, documentation, workflow, and CSV reports published. Commit
+            dc6868b.</p>
+        </div>
 
         <div class="changelog-entry">
           <div class="changelog-header">
