@@ -16,7 +16,7 @@
     <header>
       <h1 class="logo">OutfitMD</h1>
       <p>Project Status Dashboard</p>
-      <span class="last-updated">Last Updated: February 10, 2026 • 10:35 AM EST</span>
+      <span class="last-updated">Last Updated: February 10, 2026 • 2:35 PM EST</span>
     </header>
 
     <!-- Summary Stats -->
@@ -30,7 +30,7 @@
         <span class="stat-label">Pending</span>
       </div>
       <div class="stat stat-open">
-        <span class="stat-number">4</span>
+        <span class="stat-number">7</span>
         <span class="stat-label">Open</span>
       </div>
       <div class="stat stat-done">
@@ -42,8 +42,10 @@
     <!-- Current Focus -->
     <section class="focus-section">
       <h2>🎯 Current Focus</h2>
-      <p><strong>Commission Payout System Finalization</strong> — João syncing subaccounts and implementing Slack/email
-        alerts for failed payouts. Juan finalizing location referral fix. Testing and QC to prevent over/underpayment.
+      <p><strong>Product Catalog Consistency & Stripe Mapping</strong> — Updating prices for new Supreme Nutrition
+        products, auditing SKUs across all sub accounts for consistency, and mapping every subaccount to a Stripe
+        account. Commission Payout System delegated to João (syncing subaccounts, location referral fix, Slack/email
+        alerts).
       </p>
     </section>
 
@@ -136,6 +138,44 @@
             <li class="task-active">→ João: Location referral fix</li>
             <li class="task-active">→ João: Subaccount sync + Slack/email alerts</li>
             <li class="task-active">→ Testing & QC</li>
+          </ul>
+        </div>
+
+        <div class="kanban-card">
+          <div class="card-header">
+            <strong>Supreme Nutrition — New Product Prices</strong>
+            <span class="priority priority-high">HIGH</span>
+          </div>
+          <p>Add and update prices for new Supreme Nutrition products in all accounts</p>
+          <ul class="card-tasks">
+            <li class="task-active">→ Updating prices on Supreme Nutrition subaccount</li>
+            <li class="task-todo">○ Verify prices match across all locations</li>
+          </ul>
+        </div>
+
+        <div class="kanban-card">
+          <div class="card-header">
+            <strong>SKU Consistency Audit — All Sub Accounts</strong>
+            <span class="priority priority-high">HIGH</span>
+          </div>
+          <p>Fix products account by account to ensure consistent SKUs across all subaccounts</p>
+          <ul class="card-tasks">
+            <li class="task-active">→ Auditing each subaccount for SKU inconsistencies</li>
+            <li class="task-todo">○ Update missing/mismatched SKUs to match master</li>
+            <li class="task-todo">○ Verify all accounts report consistent product catalog</li>
+          </ul>
+        </div>
+
+        <div class="kanban-card">
+          <div class="card-header">
+            <strong>Subaccount → Stripe Account Mapping</strong>
+            <span class="priority priority-med">MED</span>
+          </div>
+          <p>Map every GHL subaccount to its corresponding Stripe account for proper payment routing</p>
+          <ul class="card-tasks">
+            <li class="task-active">→ Identifying all active subaccounts</li>
+            <li class="task-todo">○ Match each to Stripe connected account</li>
+            <li class="task-todo">○ Document full mapping registry</li>
           </ul>
         </div>
 
@@ -251,6 +291,26 @@
     <section class="section">
       <h2>📜 Changelog</h2>
       <div class="changelog-detailed">
+
+        <div class="changelog-entry">
+          <div class="changelog-header">
+            <span class="changelog-date">Feb 10, 2026</span>
+            <span class="changelog-time">2:35 PM</span>
+            <span class="log-tag tag-workflows">progress</span>
+          </div>
+          <strong>Product Catalog & Stripe Mapping — New Tasks</strong>
+          <p class="changelog-desc">
+            <strong>New Product Prices:</strong> Adding prices for new Supreme Nutrition products across all
+            accounts.<br>
+            <strong>SKU Consistency:</strong> Auditing and fixing product SKUs account by account across all subaccounts
+            for full consistency.<br>
+            <strong>Stripe Mapping:</strong> Mapping every GHL subaccount to its corresponding Stripe connected
+            account.<br>
+            <strong>Delegation:</strong> Commission Payout System tasks (location referral fix, subaccount sync,
+            Slack/email alerts) delegated to João.
+          </p>
+          <p class="changelog-note">⏳ In progress: All three tasks currently active.</p>
+        </div>
 
         <div class="changelog-entry">
           <div class="changelog-header">
